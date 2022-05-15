@@ -16,7 +16,7 @@ def find_jobs():
             skills = job.find('span', class_='srp-skills').text.replace(" ", "")
             more_info = job.header.h2.a['href']
             if unfam_skill not in skills:
-                with open('posts/{index}.txt','w')as f:
+                with open('{index}.txt','w')as f:
                     f.write(f"Company name: {compname.strip()}\n")
                     f.write(f"Skill req: {skills.strip()}\n")
                     f.write(f"More info: {more_info}")
